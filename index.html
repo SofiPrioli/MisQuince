@@ -27,15 +27,17 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      padding: 5vh 5vw;  /* 🔥 este padding genera el borde visible */
+      box-sizing: border-box;
     }
 
     .invitacion {
-      width: 90vw;       /* ocupa el 90% del ancho del viewport */
-      height: 90vh;      /* ocupa el 90% del alto del viewport */
+      width: 100%;      /* ocupa el espacio libre dentro del padding */
+      height: 100%;
       background: rgba(255, 255, 255, 0.95);
       border: 2px solid #cfd8dc;
       border-radius: 15px;
-      padding: 5vw;      /* padding relativo al ancho de la pantalla */
+      padding: 4vw;
       text-align: center;
       box-shadow: 0 0 15px rgba(173, 216, 230, 0.6);
       position: relative;
@@ -48,27 +50,27 @@
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 10vw;  /* escala con el ancho de pantalla */
+      font-size: 9vw;  
       color: #41c3d4;
       margin: 0 0 2vh 0;
     }
 
     .subtitulo {
       font-family: 'Playfair Display', serif;
-      font-size: 6vw;
+      font-size: 5vw;
       color: #00acc1;
       font-style: italic;
       margin: 0 0 3vh 0;
     }
 
     .texto, .text, .code, .calle, .evitar {
-      font-size: 4.5vw; /* se ajusta automáticamente */
+      font-size: 3.8vw;
       color: #455a64;
       margin: 1vh 0;
     }
 
     .salon, .Dress {
-      font-size: 6vw;
+      font-size: 5vw;
       font-family: 'Great Vibes', cursive;
       color: #00acc1;
       border: 2px solid #00acc1;
@@ -81,7 +83,7 @@
     }
 
     .cuenta-regresiva {
-      font-size: 4.5vw;
+      font-size: 4vw;
       color: #00acc1;
       margin: 1vh 0;
       font-weight: bold;
@@ -89,7 +91,7 @@
 
     .mariposa {
       position: absolute;
-      width: 12vw; /* se adapta al ancho */
+      width: 10vw; 
       opacity: 0.8;
       animation: aleteo 1.5s infinite ease-in-out alternate, volar 10s infinite linear;
       z-index: 0;
