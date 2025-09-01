@@ -12,151 +12,100 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden; /* bloquea scroll */
+      overflow: hidden; /* sin scroll */
     }
 
     body {
       background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
       background-image: url("brillo.jpg");
       background-repeat: repeat;
-      background-size: auto;
+      background-size: cover;
       font-family: 'Dancing Script', cursive;
       color: #333;
 
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* toda la pantalla */
+      height: 100vh;
     }
 
     .invitacion {
-      max-width: 600px;
+      width: 90%;              /* casi toda la pantalla */
       background: rgba(255, 255, 255, 0.95);
       border: 2px solid #cfd8dc;
-      border-radius: 20px;
-      padding: 40px;
+      border-radius: 15px;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 0 15px rgba(173, 216, 230, 0.6);
+      box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
       position: relative;
       z-index: 1;
-      margin: 0; /* sacamos el margin que creaba espacio */
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 70px;
+      font-size: 38px;
       color: #41c3d4;
       margin-bottom: 5px;
     }
 
     .subtitulo {
       font-family: 'Playfair Display', serif;
-      font-size: 36px;
+      font-size: 22px;
       color: #00acc1;
       font-style: italic;
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .texto {
-      font-size: 24px;
+      font-size: 16px;
       color: #607d8b;
-      margin: 20px 0;
+      margin: 15px 0;
     }
 
     .direccion {
-      margin: 30px 0 10px;
+      margin: 20px 0 10px;
     }
 
-    .salon {
-      font-size: 29px;
+    .salon, .Dress {
+      font-size: 20px;
       font-family: 'Great Vibes', cursive;
       color: #00acc1;
       border: 2px solid #00acc1;
-      border-radius: 10px;
-      padding: 10px 20px;
+      border-radius: 8px;
+      padding: 6px 12px;
       display: inline-block;
       margin-bottom: 10px;
       background-color: rgba(0, 172, 193, 0.05);
-      box-shadow: 0 0 10px rgba(0, 172, 193, 0.2);
+      box-shadow: 0 0 6px rgba(0, 172, 193, 0.2);
     }
 
-    .calle {
-      font-size: 25px;
+    .calle, .code, .evitar, .text {
+      font-size: 16px;
       color: #455a64;
       margin-top: 5px;
-      margin-bottom: 20px;
-    }
-
-    .Dress {
-      font-size: 29px;
-      font-family: 'Great Vibes', cursive;
-      color: #00acc1;
-      border: 2px solid #00acc1;
-      border-radius: 10px;
-      padding: 10px 20px;
-      display: inline-block;
       margin-bottom: 10px;
-      background-color: rgba(0, 172, 193, 0.05);
-      box-shadow: 0 0 10px rgba(0, 172, 193, 0.2);
-    }
-
-    .code {
-      font-size: 25px;
-      color: #455a64;
-      margin-top: 5px;
-    }
-
-    .evitar {
-      font-size: 25px;
-      color: #455a64;
-      margin-top: 5px;
     }
 
     .cuenta-regresiva {
-      font-size: 22px;
+      font-size: 16px;
       color: #00acc1;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       font-weight: bold;
     }
 
     .mariposa {
       position: absolute;
-      width: 60px;
+      width: 40px;
       opacity: 0.8;
       animation: aleteo 1.5s infinite ease-in-out alternate, volar 10s infinite linear;
       z-index: 0;
     }
 
-    .mariposa1 {
-      top: -20px;
-      left: -20px;
-      animation-delay: 0s, 0s;
-    }
-
-    .mariposa2 {
-      bottom: -20px;
-      right: -20px;
-      animation-delay: 0.5s, 2s;
-    }
-
-    .mariposa3 {
-      top: 10px;
-      right: -30px;
-      animation-delay: 1s, 4s;
-    }
-
-    .mariposa4 {
-      bottom: 30px;
-      left: -30px;
-      animation-delay: 1.5s, 6s;
-    }
-
-    .text {
-      font-size: 24px;
-      color: #607d8b;
-      margin: 20px 0;
-    }
+    .mariposa1 { top: -15px; left: -15px; animation-delay: 0s, 0s; }
+    .mariposa2 { bottom: -15px; right: -15px; animation-delay: 0.5s, 2s; }
+    .mariposa3 { top: 10px; right: -20px; animation-delay: 1s, 4s; }
+    .mariposa4 { bottom: 20px; left: -20px; animation-delay: 1.5s, 6s; }
 
     @keyframes aleteo {
       from { transform: scale(1) rotate(0deg); }
@@ -165,9 +114,9 @@
 
     @keyframes volar {
       0% { transform: translate(0, 0) rotate(0deg); }
-      25% { transform: translate(10px, -5px) rotate(2deg); }
-      50% { transform: translate(0px, 10px) rotate(-2deg); }
-      75% { transform: translate(-10px, -5px) rotate(2deg); }
+      25% { transform: translate(8px, -4px) rotate(2deg); }
+      50% { transform: translate(0px, 8px) rotate(-2deg); }
+      75% { transform: translate(-8px, -4px) rotate(2deg); }
       100% { transform: translate(0, 0) rotate(0deg); }
     }
   </style>
@@ -234,4 +183,3 @@
   </script>
 </body>
 </html>
-
