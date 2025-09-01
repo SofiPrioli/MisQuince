@@ -8,21 +8,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&family=Playfair+Display&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    html, body {
       margin: 0;
-      padding: 40px 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* bloquea scroll */
+    }
+
+    body {
       background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
       background-image: url("brillo.jpg");
       background-repeat: repeat;
       background-size: auto;
       font-family: 'Dancing Script', cursive;
       color: #333;
-      overflow-x: hidden;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* toda la pantalla */
     }
 
     .invitacion {
       max-width: 600px;
-      margin: 0 auto;
       background: rgba(255, 255, 255, 0.95);
       border: 2px solid #cfd8dc;
       border-radius: 20px;
@@ -31,6 +39,7 @@
       box-shadow: 0 0 15px rgba(173, 216, 230, 0.6);
       position: relative;
       z-index: 1;
+      margin: 0; /* sacamos el margin que creaba espacio */
     }
 
     h1 {
@@ -150,30 +159,16 @@
     }
 
     @keyframes aleteo {
-      from {
-        transform: scale(1) rotate(0deg);
-      }
-      to {
-        transform: scale(1.1) rotate(2deg);
-      }
+      from { transform: scale(1) rotate(0deg); }
+      to { transform: scale(1.1) rotate(2deg); }
     }
 
     @keyframes volar {
-      0% {
-        transform: translate(0, 0) rotate(0deg);
-      }
-      25% {
-        transform: translate(10px, -5px) rotate(2deg);
-      }
-      50% {
-        transform: translate(0px, 10px) rotate(-2deg);
-      }
-      75% {
-        transform: translate(-10px, -5px) rotate(2deg);
-      }
-      100% {
-        transform: translate(0, 0) rotate(0deg);
-      }
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(10px, -5px) rotate(2deg); }
+      50% { transform: translate(0px, 10px) rotate(-2deg); }
+      75% { transform: translate(-10px, -5px) rotate(2deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
     }
   </style>
 </head>
@@ -239,3 +234,4 @@
   </script>
 </body>
 </html>
+
